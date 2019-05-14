@@ -1,0 +1,14 @@
+<h1>Result</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+
+
+
+<% if @included == false %>
+  <h1>Sorry, but <%= @input %> can't be build out of <%= @letters %>.</h1>
+<% elsif @exists == false %>
+  <%= "Sorry, but #{@input} does not seem to be a valid English word..." %>
+<% else %>
+  <%= "Congratulations! #{@input} is a valid word!" %>
+<% end %>
+
+<%= link_to "play again", new_path %>
